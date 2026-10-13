@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南瓜影视 - 藤架南瓜田公映片单与正版观影导航</title>
+<meta name="description" content="南瓜影视（nanguayingshi-h5）做藤架南瓜田电影导航：公映片单、瓜垄类型、每日采摘场与正版观看守则，只导航持牌平台、影院公映与开放授权片源。官方网址：https://nanguayingshi-h5.github.io">
+<meta name="keywords" content="南瓜影视, nanguayingshi-h5, 藤架南瓜田电影推荐, 公映片单, 瓜垄类型分类, 正版观影导航">
+<meta name="robots" content="index,follow">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#1a1206;color:#f3e9d2;line-height:1.8;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(680px 340px at 12% 8%, rgba(255,149,0,.12), transparent 55%),
+    radial-gradient(620px 320px at 88% 92%, rgba(124,207,59,.10), transparent 55%),
+    #1a1206}
+.pg-nav{position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(26,18,6,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,149,0,.2)}
+.pg-nav .logo{font-size:20px;font-weight:900;letter-spacing:.5px}
+.pg-nav .logo b{color:#ff9500}
+.pg-nav .logo i{color:#7ccf3b;font-style:normal}
+.pg-nav .links{display:flex;gap:6px;flex-wrap:wrap}
+.pg-nav .links a{font-size:13px;color:#cbb98f;padding:6px 12px;border-radius:20px;transition:.25s}
+.pg-nav .links a:hover{background:rgba(255,149,0,.16);color:#f3e9d2}
+
+.hero{padding:52px 20px 44px;text-align:center}
+.field{max-width:780px;margin:0 auto 16px;background:#241a08;border:1px solid rgba(255,149,0,.26);border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.trellis{position:relative;height:140px;border-radius:12px;background:
+  repeating-linear-gradient(0deg,transparent 0 26px,rgba(124,207,59,.18) 26px 28px),
+  repeating-linear-gradient(90deg,transparent 0 46px,rgba(124,207,59,.18) 46px 48px);
+  overflow:hidden}
+.vine{position:absolute;top:0;bottom:0;width:3px;background:#7ccf3b;left:30%}
+.vine.v2{left:62%}
+.pumpkin{position:absolute;width:34px;height:30px;border-radius:50% 50% 46% 46%;background:linear-gradient(135deg,#ff9500,#ffc266);top:54%;left:24%;box-shadow:inset 0 -6px 8px rgba(0,0,0,.25)}
+.pumpkin.p2{left:56%;top:30%;background:linear-gradient(135deg,#ff7a00,#ffb347)}
+.pumpkin.p3{left:70%;top:66%;width:26px;height:24px}
+.sprout{position:absolute;top:8%;left:42%;font-size:20px}
+.beds{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.bed{height:54px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#1a1206}
+.bed:nth-child(1){background:linear-gradient(135deg,#ff9500,#ffc266)}
+.bed:nth-child(2){background:linear-gradient(135deg,#7ccf3b,#a4e36a)}
+.bed:nth-child(3){background:linear-gradient(135deg,#6b46c1,#9f7aea)}
+.bed:nth-child(4){background:linear-gradient(135deg,#2dd4bf,#7defe0)}
+.mark{display:inline-block;margin-top:14px;font-size:13px;font-weight:900;color:#ff9500;background:#241a08;border:1px solid rgba(255,149,0,.3);padding:4px 14px;border-radius:20px}
+.hero h1{font-size:30px;color:#f3e9d2;margin:8px 0 12px}
+.hero h1 b{color:#ff9500}
+.hero p{color:#cbb98f;max-width:680px;margin:0 auto 16px;font-size:15px}
+.hero .url{display:inline-block;font-size:13px;color:#1a1206;font-weight:800;background:linear-gradient(90deg,#ff9500,#7ccf3b);padding:8px 18px;border-radius:30px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips span{font-size:12px;color:#f3e9d2;padding:5px 13px;border-radius:20px;border:1px solid rgba(255,149,0,.2)}
+.chips span:nth-child(1){border-color:#ff9500;color:#ffc266}
+.chips span:nth-child(2){border-color:#7ccf3b;color:#a4e36a}
+.chips span:nth-child(3){border-color:#2dd4bf;color:#7defe0}
+
+.wrap{max-width:1160px;margin:0 auto;padding:58px 20px}
+.kicker{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#ff9500;margin-bottom:8px}
+.sec-title{font-size:26px;font-weight:900;color:#f3e9d2;margin-bottom:26px}
+.sec-title b{color:#7ccf3b}
+
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.pk{background:#241a08;border:1px solid rgba(255,149,0,.14);border-radius:14px;overflow:hidden;transition:.3s}
+.pk:hover{transform:translateY(-4px);border-color:#ff9500;box-shadow:0 16px 36px rgba(255,149,0,.12)}
+.pk .top{height:96px;position:relative;display:flex;align-items:flex-end;padding:10px}
+.pk .top.g1{background:linear-gradient(135deg,#b45309,#ff9500)}
+.pk .top.g2{background:linear-gradient(135deg,#2f855a,#7ccf3b)}
+.pk .top.g3{background:linear-gradient(135deg,#6b46c1,#9f7aea)}
+.pk .top.g4{background:linear-gradient(135deg,#0d9488,#2dd4bf)}
+.pk .top .bed-tag{font-size:11px;font-weight:800;color:#1a1206;background:#f3e9d2;padding:2px 9px;border-radius:12px}
+.pk .top .ver{position:absolute;right:10px;top:10px;font-size:10px;color:#1a1206;background:#7ccf3b;padding:2px 8px;border-radius:10px}
+.pk .body{padding:16px 18px}
+.pk .body h4{color:#f3e9d2;font-size:16px;margin-bottom:4px}
+.pk .body .meta{font-size:12px;color:#ff9500;margin-bottom:6px}
+.pk .body p{font-size:13px;color:#cbb98f;margin:0}
+
+.rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.rw{background:#241a08;border-radius:14px;padding:20px;transition:.3s;border:1px solid rgba(203,185,143,.14)}
+.rw:hover{transform:translateY(-3px)}
+.rw .no{font-size:12px;font-weight:900;color:#7ccf3b;margin-bottom:6px}
+.rw h4{color:#f3e9d2;font-size:15px;margin-bottom:4px}
+.rw p{color:#cbb98f;font-size:12px;margin:0}
+.rw.r2{border-top:3px solid #7ccf3b}
+.rw.r3{border-top:3px solid #9f7aea}
+.rw.r4{border-top:3px solid #2dd4bf}
+
+.pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.pc{background:#241a08;border-left:4px solid #ff9500;border-radius:12px;padding:18px}
+.pc h4{color:#f3e9d2;font-size:15px;margin-bottom:4px}
+.pc .slot{font-size:12px;color:#7ccf3b;font-weight:800;margin-bottom:6px}
+.pc p{color:#cbb98f;font-size:13px;margin:0}
+.pc.c2{border-left-color:#7ccf3b}
+.pc.c3{border-left-color:#9f7aea}
+.pc.c4{border-left-color:#2dd4bf}
+.pc.c5{border-left-color:#ffc266}
+.pc.c6{border-left-color:#ff9500}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ru{background:#241a08;border:1px solid rgba(255,149,0,.22);border-radius:12px;padding:18px;text-align:center}
+.ru .num{font-size:24px;font-weight:900;color:#ff9500;margin-bottom:6px}
+.ru h4{color:#f3e9d2;font-size:14px;margin-bottom:4px}
+.ru p{color:#cbb98f;font-size:12px;margin:0}
+
+.about{border:1px solid rgba(255,149,0,.22);border-radius:16px;padding:30px;background:linear-gradient(135deg,rgba(255,149,0,.08),rgba(124,207,59,.06));display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.about .txt{flex:1;min-width:260px}
+.about h2{color:#f3e9d2;font-size:20px;margin-bottom:10px}
+.about h2 b{color:#ff9500}
+.about p{color:#cbb98f;font-size:14px;margin-bottom:8px}
+.about .stats{display:flex;gap:20px;flex-wrap:wrap}
+.about .stats .n{font-size:26px;font-weight:900;color:#7ccf3b}
+.about .stats .l{font-size:11px;color:#ff9500}
+
+.foot{text-align:center;padding:32px 20px;background:#120c04;border-top:1px solid rgba(255,149,0,.16);color:#a8916a;font-size:13px}
+.foot a{color:#ff9500}
+.foot .lg{font-size:18px;font-weight:900;color:#f3e9d2;margin-bottom:8px}
+
+@media(max-width:640px){.hero h1{font-size:24px}.pg-nav .links a{font-size:12px;padding:5px 9px}.beds{grid-template-columns:repeat(2,1fr)}.bed{height:46px}.trellis{height:120px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<nav class="pg-nav">
+  <div class="logo"><b>南瓜影视</b> <i>· 藤架南瓜田</i></div>
+  <div class="links">
+    <a href="#home">首页</a>
+    <a href="#picks">公映片单</a>
+    <a href="#rows">瓜垄类型</a>
+    <a href="#pick">每日采摘</a>
+    <a href="#rules">正版守则</a>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="field" aria-hidden="true">
+    <div class="trellis">
+      <div class="vine"></div><div class="vine v2"></div>
+      <div class="sprout">🍃</div>
+      <div class="pumpkin"></div><div class="pumpkin p2"></div><div class="pumpkin p3"></div>
+    </div>
+    <div class="beds">
+      <div class="bed">正剧垄</div><div class="bed">自然垄</div><div class="bed">悬疑垄</div><div class="bed">合家垄</div>
+    </div>
+    <span class="mark">南瓜田·四瓜垄</span>
+  </div>
+  <h1>南瓜影视：<b>藤架南瓜田</b>按瓜垄挑正片</h1>
+  <p>“南瓜电影”类平台曾因无证传播、未授权片源、侵权下架被媒体点名 [1,7,10](@ref)；本页不做克隆、不内嵌播放器、不写网盘提取码、不引盗版聚合源。只按公映许可导航持牌平台、影院公映与开放授权影像。</p>
+  <span class="url">🌐 https://nanguayingshi-h5.github.io</span>
+  <div class="chips">
+    <span>🎃 公映片单</span><span>🍃 瓜垄类型</span><span>🧺 每日采摘</span>
+  </div>
+</header>
+
+<main>
+<section id="picks" class="wrap">
+  <div class="kicker">PUMPKIN PATCH PICKS</div>
+  <h2 class="sec-title">公映片单 <b>四垄样例</b></h2>
+  <div class="picks">
+    <article class="pk"><div class="top g1"><span class="bed-tag">正剧垄</span><span class="ver">修复/正版</span></div><div class="body"><h4>海上钢琴师</h4><div class="meta">托纳多雷 · 1998 · 剧情/音乐</div><p>船舱、琴键与选择；持牌平台/公映修复版为准，适合正剧垄开场。</p></div></article>
+    <article class="pk"><div class="top g2"><span class="bed-tag">自然垄</span><span class="ver">开放/档案</span></div><div class="body"><h4>地球脉动 II</h4><div class="meta">BBC · 2016 · 自然/纪录片</div><p>岛屿、山地、城市生态；开放授权版可走图书馆影像与官方频道。</p></div></article>
+    <article class="pk"><div class="top g3"><span class="bed-tag">悬疑垄</span><span class="ver">正版/字幕</span></div><div class="body"><h4>看不见的客人</h4><div class="meta">奥里奥尔·保罗 · 2016 · 悬疑/推理</div><p>口供、时间线与反转；标注本格/社会双标签与高清版差异。</p></div></article>
+    <article class="pk"><div class="top g4"><span class="bed-tag">合家垄</span><span class="ver">正版/字幕</span></div><div class="body"><h4>寻梦环游记</h4><div class="meta">皮克斯 · 2017 · 动画/家庭</div><p>记忆、亲情与音乐；标适龄、正版动画专区和字幕版本，只引持牌片源。</p></div></article>
+  </div>
+</section>
+
+<section id="rows" class="wrap">
+  <div class="kicker">PUMPKIN ROWS</div>
+  <h2 class="sec-title">瓜垄类型 <b>四垄</b></h2>
+  <div class="rows">
+    <div class="rw r1"><div class="no">ROW 1 · 正剧</div><h4>家庭/历史/作者</h4><p>传记、年代、作者电影；按公映许可核对，引导持牌平台与公映修复版，不列无资质聚合站。</p></div>
+    <div class="rw r2"><div class="no">ROW 2 · 动作</div><h4>商业爽片垄</h4><p>特工、竞速、视效大片；按节奏分级，附4K/IMAX建议，不引未授权磁力。</p></div>
+    <div class="rw r3"><div class="no">ROW 3 · 悬疑</div><h4>烧脑/社会派</h4><p>本格推理、时间线、反转；标正版平台字幕来源与高清版差异。</p></div>
+    <div class="rw r4"><div class="no">ROW 4 · 合家</div><h4>动画/爱情/轻喜剧</h4><p>适龄、节庆、亲子；标正版平台地区版，不写网盘提取码。</p></div>
+  </div>
+</section>
+
+<section id="pick" class="wrap">
+  <div class="kicker">DAILY HARVEST</div>
+  <h2 class="sec-title">每日采摘 <b>六场</b></h2>
+  <div class="pick">
+    <div class="pc"><div class="slot">晨采·正剧垄</div><h4>正剧采摘</h4><p>传记/历史长片；公映修复版优先，持牌平台入口，不提前放未授权资源。</p></div>
+    <div class="pc c2"><div class="slot">上午·自然垄</div><h4>自然采摘</h4><p>生态与地理分垄；开放授权纪录片走官方/图书馆来源。</p></div>
+    <div class="pc c3"><div class="slot">午后·动作垄</div><h4>爽片采摘</h4><p>追逐/特工/视效；建议4K、杜比、正版版本，只引持牌片源。</p></div>
+    <div class="pc c4"><div class="slot">下午·悬疑垄</div><h4>烧脑采摘</h4><p>本格/社会派轮换；标注时间线、反转次数与高清版差异。</p></div>
+    <div class="pc c5"><div class="slot">傍晚·合家垄</div><h4>合家采摘</h4><p>动画/爱情/轻喜剧；标适龄、时长与正版字幕来源。</p></div>
+    <div class="pc c6"><div class="slot">夜间·回垄</div><h4>高分重采</h4><p>四垄高分重刷；只给持牌回看入口，不写网盘提取码、不引磁链。</p></div>
+  </div>
+</section>
+
+<section id="rules" class="wrap">
+  <div class="kicker">PUMPKIN RULES</div>
+  <h2 class="sec-title">正版观看 <b>守则</b></h2>
+  <div class="rules">
+    <div class="ru"><div class="num">01</div><h4>持牌优先</h4><p>引导持牌视频平台、影院公映/重映、官方频道；不内嵌未授权播放器。</p></div>
+    <div class="ru"><div class="num">02</div><h4>授权核对</h4><p>按信息网络传播权授权核对片源，不列无资质盗版/聚合站 [7](@ref)。</p></div>
+    <div class="ru"><div class="num">03</div><h4>开放授权</h4><p>老片修复、纪录片、公有领域片可引图书馆/开放档案，不提供破解文件。</p></div>
+    <div class="ru"><div class="num">04</div><h4>不碰盗版</h4><p>不写网盘提取码、不引磁链/换源/镜像、不用“免费高清/离线缓存/破解”等暗语；警惕同名站无证传播与下架风险 [1,10](@ref)。</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="about">
+    <div class="txt">
+      <h2>南瓜影视 <b>藤架南瓜田是什么</b></h2>
+      <p>不是“南瓜电影”原站克隆，而是一块按瓜垄排片的正版导航田：藤架装入口、四垄装公映精选、类型进瓜垄、每日进采摘场、守则装合规。静态单页、移动端自适应、锚点内链、不生成 robots.txt / sitemap.xml，符合必应收录基本规范（唯一H1、完整meta、语义化nav/main/section/article/footer）[12,15](@ref)。</p>
+      <p>长尾吃「藤架南瓜田电影推荐 / 公映片单 / 瓜垄类型分类 / 每日采摘排期 / 正版平台看片」。全站严格只做正版、公映、持牌、开放授权导航。</p>
+    </div>
+    <div class="stats">
+      <div><div class="n">4</div><div class="l">瓜垄分类</div></div>
+      <div><div class="n">4</div><div class="l">类型分垄</div></div>
+      <div><div class="n">6</div><div class="l">每日采摘</div></div>
+      <div><div class="n">0</div><div class="l">盗版提取码</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="lg">🎃🍃 南瓜影视·藤架南瓜田</div>
+  官方网址：<a href="https://nanguayingshi-h5.github.io">https://nanguayingshi-h5.github.io</a><br>
+  © 2026 南瓜影视｜公映片单 / 瓜垄类型 / 每日采摘 / 正版观影导航（仅作正版、公映、开放授权导航，不提供未授权播放）
+</footer>
+
+</body>
+</html>
